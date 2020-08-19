@@ -7,7 +7,7 @@ cap=cv2.VideoCapture(0)
 time.sleep(2)
 
 background = 0
-
+#first the backgroung is to be captured for a paticular time
 for i in range(30):
 
     ret, background= cap.read()
@@ -19,7 +19,7 @@ while(cap.isOpened()):
     if not ret:
         break
 
-
+#when u use a red cloth or any thing related to red it becomes invisible at tat area
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     lower_red = np.array([0,120,70])
